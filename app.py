@@ -27,3 +27,6 @@ if st.button("Predict"):
 st.subheader("Model Performance")
 st.write("Accuracy: 79%")
 st.write("ROC-AUC Score: 0.83")
+
+st.subheader("Feature Importance")
+st.image("models/feature_importance.png")
