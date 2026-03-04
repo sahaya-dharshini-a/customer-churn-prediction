@@ -24,3 +24,6 @@ if st.button("Predict"):
         st.error(f"Customer is likely to churn (Probability: {probability:.2f})")
     else:
         st.success(f"Customer is likely to stay (Probability: {probability:.2f})")
+st.subheader("Model Performance")
+st.write("Accuracy: 79%")
+st.write("ROC-AUC Score: 0.83")
