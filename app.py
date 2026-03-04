@@ -2,7 +2,7 @@ import streamlit as st
 from src.predict import predict
 
 st.title("Customer Churn Prediction System")
-
+st.markdown("Machine Learning based churn prediction using RandomForest")
 st.write("Enter customer details below:")
 
 tenure = st.slider("Tenure (months)", 0, 72, 12)
