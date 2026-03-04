@@ -19,3 +19,12 @@ This project predicts customer churn using a RandomForest classifier with hyperp
 - Pandas
 - Scikit-learn
 - Streamlit
+
+## 🧠 Machine Learning Workflow
+1. Data Cleaning
+2. Encoding categorical variables
+3. Feature scaling
+4. Model training using RandomForest
+5. Hyperparameter tuning via GridSearchCV
+6. Model evaluation
+7. Deployment using Streamlit
