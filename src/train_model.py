@@ -53,3 +53,23 @@ joblib.dump(scaler, "../models/scaler.pkl")
 joblib.dump(feature_names, "../models/feature_names.pkl")
 
 print("\nModel saved successfully!")
+
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# Feature Importance
+importances = model.feature_importances_
+feature_importance_df = pd.DataFrame({
+    "Feature": feature_names,
+    "Importance": importances
+}).sort_values(by="Importance", ascending=False)
+
+plt.figure(figsize=(10,6))
+plt.barh(feature_importance_df["Feature"][:10],
+         feature_importance_df["Importance"][:10])
+plt.xlabel("Importance")
+plt.ylabel("Feature")
+plt.title("Top 10 Feature Importances")
+plt.gca().invert_yaxis()
+plt.tight_layout()
+plt.savefig("../models/feature_importance.png")
